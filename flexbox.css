@@ -1,0 +1,258 @@
+/* ====== Texto e blocos de apoio ====== */
+h3 {
+    color: #fff;
+    margin: 25px 0 8px;
+    font-size: 1.1rem;
+}
+
+ul, ol {
+    margin-bottom: 15px;
+    padding-left: 22px;
+    line-height: 1.7;
+}
+
+section a {
+    color: #00d8ff;
+    font-weight: bold;
+}
+
+pre {
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0 15px;
+    overflow-x: auto;
+    line-height: 1.5;
+}
+
+pre code {
+    background: none;
+    padding: 0;
+    color: #9be7ff;
+}
+
+.rotulo {
+    margin: 18px 0 0;
+    font-size: 0.95rem;
+}
+
+.dica {
+    border-left: 4px solid #00d8ff;
+    background: rgba(0, 216, 255, 0.08);
+    border-radius: 0 8px 8px 0;
+    padding: 12px 16px;
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+.dica p {
+    margin: 0;
+}
+
+/* ====== Tabelas ====== */
+.tabela-wrap {
+    overflow-x: auto;
+    margin: 12px 0 15px;
+}
+
+table {
+    width: 100%;
+    min-width: 520px;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    vertical-align: top;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+th {
+    color: #00d8ff;
+}
+
+/* ====== Demonstrações (base) ====== */
+.demo {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 8px 0 5px;
+    display: flex;
+    gap: 10px;
+}
+
+.demo > div {
+    background: #00d8ff;
+    color: #000;
+    font-weight: bold;
+    border-radius: 6px;
+    text-align: center;
+    padding: 12px 18px;
+    min-width: 56px;
+}
+
+/* ====== flex-direction ====== */
+.fx-row            { flex-direction: row; }
+.fx-row-reverse    { flex-direction: row-reverse; }
+.fx-column         { flex-direction: column; }
+.fx-column-reverse { flex-direction: column-reverse; }
+
+/* ====== flex-wrap ====== */
+.fx-nowrap { flex-wrap: nowrap; overflow-x: auto; }
+.fx-wrap   { flex-wrap: wrap; }
+
+.fx-nowrap > div,
+.fx-wrap > div {
+    flex: 0 0 120px;
+}
+
+/* ====== justify-content (eixo principal) ====== */
+.jc-start   { justify-content: flex-start; }
+.jc-center  { justify-content: center; }
+.jc-end     { justify-content: flex-end; }
+.jc-between { justify-content: space-between; }
+.jc-around  { justify-content: space-around; }
+.jc-evenly  { justify-content: space-evenly; }
+
+/* ====== align-items (eixo transversal) ====== */
+.fx-align {
+    min-height: 120px;
+}
+
+.ai-stretch  { align-items: stretch; }
+.ai-start    { align-items: flex-start; }
+.ai-center   { align-items: center; }
+.ai-end      { align-items: flex-end; }
+.ai-baseline { align-items: baseline; }
+
+.fonte-p { font-size: 1rem; }
+.fonte-m { font-size: 1.4rem; }
+.fonte-g { font-size: 2rem; }
+
+/* ====== align-content (várias linhas) ====== */
+.fx-ac {
+    flex-wrap: wrap;
+    height: 220px;
+    align-content: space-between;
+}
+
+.fx-ac > div {
+    flex: 0 0 30%;
+}
+
+/* ====== flex-grow ====== */
+.grow-1 { flex-grow: 1; }
+.grow-2 { flex-grow: 2; }
+
+/* ====== flex-shrink ====== */
+.fx-shrink {
+    overflow-x: auto;
+}
+
+.fx-shrink > div {
+    flex-basis: 400px;
+}
+
+.shrink-0 { flex-shrink: 0; }
+
+/* ====== flex-basis ====== */
+.fx-basis { overflow-x: auto; }   /* em telas estreitas, rola em vez de estourar */
+
+.basis-100   { flex: 0 0 100px; }
+.basis-200   { flex: 0 0 200px; }
+.basis-resto { flex: 1; }
+
+/* ====== align-self ====== */
+.fx-self {
+    min-height: 150px;
+    align-items: flex-start;
+}
+
+.self-center  { align-self: center; }
+.self-end     { align-self: flex-end; }
+.self-stretch { align-self: stretch; }
+
+/* ====== order ====== */
+.ordem-1 { order: 1; }
+.ordem-2 { order: 2; }
+.ordem-3 { order: 3; }
+
+/* ====== Aplicação 1: centralizar ====== */
+.fx-centro {
+    height: 160px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ====== Aplicação 2: barra de navegação ====== */
+.nav-demo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-top: 8px;
+}
+
+.nav-demo .logo {
+    color: #00d8ff;
+    font-size: 1.1rem;
+}
+
+.nav-demo .empurra {
+    margin-left: auto;
+}
+
+/* ====== Aplicação 3: cards que quebram linha ====== */
+.fx-cards {
+    flex-wrap: wrap;
+}
+
+.fx-cards > div {
+    flex: 1 1 180px;
+    padding: 24px 18px;
+}
+
+/* ====== Área de Testes ====== */
+.teste-css {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.fx-lab {
+    min-height: 160px;
+    /* ALTERE AQUI: justify-content, align-items, flex-wrap, flex-direction... */
+}
+
+.fx-lab > div {
+    width: 90px;
+}
+
+/* ====== Navegação entre páginas ====== */
+.navegacao {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.navegacao a {
+    color: #00d8ff;
+    font-weight: bold;
+}
+
+/* ====== Responsividade ====== */
+@media (max-width: 600px) {
+    section {
+        padding: 18px;
+    }
+
+    .fx-ac {
+        height: 260px;
+    }
+}
